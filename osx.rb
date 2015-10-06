@@ -10,22 +10,22 @@ dep 'VirtualBox.installer' do
   source "http://download.virtualbox.org/virtualbox/4.3.8/VirtualBox-4.3.8-92456-OSX.dmg"
 end
 
-dep 'Vagrant.app' do
-  requires 'VirtualBox.installer'
+# dep 'Vagrant.app' do
+#   requires 'VirtualBox.installer'
+# 
+#   met? {
+#     "/usr/bin/vagrant".p.exists?
+#   }
+# 
+#   source "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2.dmg"
+# end
 
-  met? {
-    "/usr/bin/vagrant".p.exists?
-  }
-
-  source "https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2.dmg"
-end
-
-dep 'Dropbox.app' do
-  source "https://www.dropbox.com/download?plat=mac"
-end
+# dep 'Dropbox.app' do
+#   source "https://www.dropbox.com/download?plat=mac"
+# end
 
 dep 'Alfred.app' do
-  source "https://cachefly.alfredapp.com/Alfred_2.6_374.zip"
+  source "https://cachefly.alfredapp.com/Alfred_2.8_414.zip"
 end
 
 dep 'iTerm.app' do
@@ -41,7 +41,7 @@ dep 'Chromium.app' do
 end
 
 dep 'FirefoxDeveloperEdition.app' do
-  source "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-aurora/firefox-38.0a2.en-US.mac.dmg"
+  source "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-aurora/firefox-43.0a2.en-US.mac.dmg"
 end
 
 dep 'Transmission.app' do
@@ -49,18 +49,18 @@ dep 'Transmission.app' do
 end
 
 dep 'MacVim.app' do
-  source 'https://github.com/b4winckler/macvim/releases/download/snapshot-73/MacVim-snapshot-73-Mavericks.tbz'
+  source 'https://github-cloud.s3.amazonaws.com/releases/692798/b87eecb6-c962-11e3-8d73-867380da71e3.tbz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIMWPLRQEC4XCWWPA%2F20151005%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20151005T043915Z&X-Amz-Expires=3600&X-Amz-Signature=90d30854b47f88619b0d3c8e5db035cca3533929e68901068abf0d756a2f0b55&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DMacVim-snapshot-73-Mavericks.tbz&response-content-type=application%2Foctet-stream'
 end
 
 dep 'all-osx-apps' do
   requires 'MenuMeters.app'
   requires 'VLC.app'
   requires 'VirtualBox.installer'
-  requires 'Vagrant.app'
+  # requires 'Vagrant.app'
   requires 'Spectacle.app'
   requires 'iTerm.app'
   requires 'Alfred.app'
-  requires 'Dropbox.app'
+  # requires 'Dropbox.app'
   requires 'Chromium.app'
   requires 'Transmission.app'
   requires 'FirefoxDeveloperEdition.app'

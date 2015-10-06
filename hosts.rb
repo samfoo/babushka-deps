@@ -26,3 +26,13 @@ dep 'kakadu' do
   requires 'all-osx-apps'
   requires 'enable-full-disk-encryption'
 end
+
+dep 'queenstown' do
+  requires 'homebrew'
+  requires 'all-packaged-apps'
+  requires 'dots'
+  requires 'all-osx-settings'
+  requires 'all-osx-apps'
+  requires 'all-fonts'
+  requires 'enable-full-disk-encryption'
+end
